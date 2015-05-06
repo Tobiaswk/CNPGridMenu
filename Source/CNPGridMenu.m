@@ -192,7 +192,8 @@
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     [self.titleLabel setFont:[UIFont systemFontOfSize:14]];
     [self.titleLabel setTextColor:self.blurEffectStyle == CNPBlurEffectStyleDark?[UIColor whiteColor]:[UIColor darkGrayColor]];
-    [self.titleLabel setNumberOfLines:2];
+    [self.titleLabel setNumberOfLines:1];
+    [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
     [self.titleLabel setTextAlignment:NSTextAlignmentCenter];
     if (CNP_IS_IOS8) {
         [((UIVisualEffectView *)self.vibrancyView).contentView addSubview:self.titleLabel];
